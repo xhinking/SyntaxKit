@@ -85,8 +85,8 @@
 		2198CEDB1B36D5DE00BD463F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211989961B2EC38B00F0D786 /* Theme.swift */; };
 		2198CEDC1B36D5E100BD463F /* SyntaxKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 211989951B2EC38B00F0D786 /* SyntaxKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21F28DDB1B7AC7F8009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDA1B7AC7F8009DD1E9 /* X.framework */; };
-		21F28DDD1B7AC802009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDC1B7AC802009DD1E9 /* X.framework */; };
 		21F28DDF1B7AC80B009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDE1B7AC80B009DD1E9 /* X.framework */; };
+		922E4AF91D5EE63A005E600E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922E4AF81D5EE63A005E600E /* Color.swift */; };
 		92EC79D41CC9060600E058ED /* JavaScript.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 92EC79D31CC9060600E058ED /* JavaScript.tmLanguage */; };
 		92EC79D51CC9060600E058ED /* JavaScript.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = 92EC79D31CC9060600E058ED /* JavaScript.tmLanguage */; };
 		92EC79D71CC9061D00E058ED /* test.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EC79D61CC9061D00E058ED /* test.js.txt */; };
@@ -186,6 +186,7 @@
 		21F28DDA1B7AC7F8009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/iOS/X.framework; sourceTree = "<group>"; };
 		21F28DDC1B7AC802009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/Mac/X.framework; sourceTree = "<group>"; };
 		21F28DDE1B7AC80B009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/watchOS/X.framework; sourceTree = "<group>"; };
+		922E4AF81D5EE63A005E600E /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		92EC79D31CC9060600E058ED /* JavaScript.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = JavaScript.tmLanguage; sourceTree = "<group>"; };
 		92EC79D61CC9061D00E058ED /* test.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.js.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,7 +230,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F28DDD1B7AC802009DD1E9 /* X.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +340,7 @@
 				211989931B2EC38B00F0D786 /* Result.swift */,
 				211989941B2EC38B00F0D786 /* ResultSet.swift */,
 				211989961B2EC38B00F0D786 /* Theme.swift */,
+				922E4AF81D5EE63A005E600E /* Color.swift */,
 				210299C11B2E8924009C61EE /* Resources */,
 				210299CD1B2E8924009C61EE /* Tests */,
 			);
@@ -736,6 +737,7 @@
 				211989981B2EC38B00F0D786 /* Capture.swift in Sources */,
 				2119899B1B2EC38B00F0D786 /* Language.swift in Sources */,
 				2119899C1B2EC38B00F0D786 /* Parser.swift in Sources */,
+				922E4AF91D5EE63A005E600E /* Color.swift in Sources */,
 				211989991B2EC38B00F0D786 /* CaptureCollection.swift in Sources */,
 				2119899F1B2EC38B00F0D786 /* ResultSet.swift in Sources */,
 				2119899D1B2EC38B00F0D786 /* Pattern.swift in Sources */,
@@ -1065,10 +1067,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/SyntaxKit/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1090,10 +1089,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/SyntaxKit/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1201,6 +1197,7 @@
 				211826ED1D257A71003F2BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		211826EE1D257A71003F2BF2 /* Build configuration list for PBXNativeTarget "SyntaxKitTests-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1209,6 +1206,7 @@
 				211826F01D257A71003F2BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		211989B81B2EC3B600F0D786 /* Build configuration list for PBXNativeTarget "SyntaxKit-iOS" */ = {
 			isa = XCConfigurationList;

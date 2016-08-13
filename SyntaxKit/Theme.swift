@@ -7,10 +7,12 @@
 //
 
 import Foundation
-import X
+// import X
 
 #if !os(OSX)
-	import UIKit
+    import UIKit
+#else
+    import AppKit
 #endif
 
 public typealias Attributes = [String: AnyObject]
